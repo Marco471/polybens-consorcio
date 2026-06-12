@@ -15,13 +15,13 @@ import {
 function App() {
   const [subir, setSubir] = useState(false);
 
-  useEffect(() => {
-    const intervalo = setInterval(() => {
-      setSubir((valor) => !valor);
-    }, 2000);
+useEffect(() => {
+  const timer = setTimeout(() => {
+    setSubir(true);
+  }, 100);
 
-    return () => clearInterval(intervalo);
-  }, []);
+  return () => clearTimeout(timer);
+}, []);
 
   return (
     <div
@@ -55,20 +55,26 @@ function App() {
           />
 
           <h1
-            style={{
-              fontSize: "3rem",
-              lineHeight: "1.2",
-              marginBottom: "20px",
-            }}
-          >
+  style={{
+    fontSize: "3rem",
+    lineHeight: "1.2",
+    marginBottom: "20px",
+    transform: subir ? "translateX(0)" : "translateX(80px)",
+    opacity: subir ? 1 : 0,
+    transition: "all 1.5s ease",
+  }}
+>
             Conquiste seu imóvel ou veículo sem pagar juros abusivos.
           </h1>
 
-          <p
+    <p
   style={{
     fontSize: "1.2rem",
     color: "#d1d5db",
     marginBottom: "30px",
+    transform: subir ? "translateX(0)" : "translateX(100px)",
+    opacity: subir ? 1 : 0,
+    transition: "all 2s ease",
   }}
 >
   Faça uma simulação gratuita e descubra como transformar seus planos
@@ -97,6 +103,9 @@ function App() {
     color: "#d1d5db",
     fontSize: "1rem",
     lineHeight: "1.8",
+    transform: subir ? "translateX(0)" : "translateX(140px)",
+    opacity: subir ? 1 : 0,
+    transition: "all 3s ease",
   }}
 >
   Atendimento personalizado • Sem juros bancários • Simulação gratuita
