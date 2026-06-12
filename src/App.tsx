@@ -262,16 +262,22 @@ function App() {
           textAlign: "center",
         }}
       >
-        <img
-          src={logo}
-          alt="Polybens"
-          style={{
-            width: "120px",
-            marginBottom: "20px",
-          }}
-        />
+        <div
+  style={{
+    marginBottom: "20px",
+    padding: "15px",
+    background: "rgba(255,255,255,0.05)",
+    border: "1px solid rgba(255,255,255,0.1)",
+    borderRadius: "12px",
+    color: "#dbeafe",
+    textAlign: "center",
+    maxWidth: "400px",
+  }}
+>
+  ✅ Atendimento personalizado e simulação sem compromisso.
+</div>
 
-        <h2
+<h2
   style={{
     color: "#ffffff",
     marginTop: "20px",
@@ -280,12 +286,16 @@ function App() {
   Pronto para dar o primeiro passo?
 </h2>
 
-        <p style={{ color: "#d1d5db" }}>
-          Clique no WhatsApp e receba uma simulação gratuita e sem compromisso.
-        </p>
+<p style={{ color: "#d1d5db" }}>
+  Clique no WhatsApp e receba uma simulação gratuita e sem compromisso.
+</p>
 
-        <div
+<div
   style={{
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    textAlign: "center",
     marginTop: "20px",
     color: "#d1d5db",
     lineHeight: "2",
