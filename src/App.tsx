@@ -4,6 +4,8 @@ import predio from "./assets/predio.jpg";
 import carro from "./assets/carro.jpg";
 import celular from "./assets/celular.jpg";
 
+import { useEffect, useState } from "react";
+
 import {
   FaWhatsapp,
   FaInstagram,
@@ -11,25 +13,18 @@ import {
 } from "react-icons/fa";
 
 function App() {
-  return (
-    <>
-      <style>
-        {`
-          @keyframes flutuar {
-            0% {
-              transform: translateY(0px);
-            }
-            50% {
-              transform: translateY(-10px);
-            }
-            100% {
-              transform: translateY(0px);
-            }
-          }
-        `}
-      </style>
+  const [subir, setSubir] = useState(false);
 
-      <div
+  useEffect(() => {
+    const intervalo = setInterval(() => {
+      setSubir((valor) => !valor);
+    }, 2000);
+
+    return () => clearInterval(intervalo);
+  }, []);
+
+  return (
+    <div
         style={{
           backgroundColor: "#0B1220",
           color: "#ffffff",
@@ -124,8 +119,13 @@ function App() {
     height: "500px",
     objectFit: "contain",
     borderRadius: "24px",
-    boxShadow: "0 15px 35px rgba(0,0,0,0.35)",
-    animation: "flutuar 4s ease-in-out infinite",
+    transform: subir
+      ? "translateY(-15px)"
+      : "translateY(0px)",
+    transition: "all 2s ease-in-out",
+    boxShadow: subir
+      ? "0 25px 50px rgba(37,211,102,0.25)"
+      : "0 15px 35px rgba(0,0,0,0.35)",
   }}
 />
         </div>
@@ -417,11 +417,11 @@ function App() {
   }}
 >
   <FaFacebookF />
+
 </a>
-              </div>
+        </div>
       </section>
     </div>
-    </>
   );
 }
 
