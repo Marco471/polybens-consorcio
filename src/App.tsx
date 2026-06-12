@@ -12,13 +12,30 @@ import {
 
 function App() {
   return (
-    <div
-      style={{
-        backgroundColor: "#0B1220",
-        color: "#ffffff",
-        fontFamily: "Arial, sans-serif",
-      }}
-    >
+    <>
+      <style>
+        {`
+          @keyframes flutuar {
+            0% {
+              transform: translateY(0px);
+            }
+            50% {
+              transform: translateY(-10px);
+            }
+            100% {
+              transform: translateY(0px);
+            }
+          }
+        `}
+      </style>
+
+      <div
+        style={{
+          backgroundColor: "#0B1220",
+          color: "#ffffff",
+          fontFamily: "Arial, sans-serif",
+        }}
+      >
       {/* HERO */}
       <section
         style={{
@@ -108,6 +125,7 @@ function App() {
     objectFit: "contain",
     borderRadius: "24px",
     boxShadow: "0 15px 35px rgba(0,0,0,0.35)",
+    animation: "flutuar 4s ease-in-out infinite",
   }}
 />
         </div>
@@ -400,9 +418,10 @@ function App() {
 >
   <FaFacebookF />
 </a>
-        </div>
+              </div>
       </section>
     </div>
+    </>
   );
 }
 
