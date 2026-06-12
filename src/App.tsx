@@ -291,17 +291,28 @@ useEffect(() => {
       >
         <div
   style={{
-    marginBottom: "20px",
-    padding: "15px",
+    margin: "0 auto 30px auto",
+    padding: "20px",
     background: "rgba(255,255,255,0.05)",
     border: "1px solid rgba(255,255,255,0.1)",
-    borderRadius: "12px",
+    borderRadius: "16px",
     color: "#dbeafe",
     textAlign: "center",
-    maxWidth: "400px",
+    maxWidth: "450px",
+    lineHeight: "2",
   }}
 >
-  ✅ Atendimento personalizado e simulação sem compromisso.
+  <p style={{ margin: "5px 0" }}>
+    ✅ Atendimento personalizado
+  </p>
+
+  <p style={{ margin: "5px 0" }}>
+    ✅ Simulação sem compromisso
+  </p>
+
+  <p style={{ margin: "5px 0" }}>
+    ✅ Suporte do início ao fim
+  </p>
 </div>
 
 <h2
