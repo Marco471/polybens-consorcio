@@ -65,25 +65,19 @@ function App() {
 
 
           <a
-            href="https://wa.me/message/QZSN4LOSADR3A1"
-            target="_blank"
-            rel="noreferrer"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "10px",
-              backgroundColor: "#16a34a",
-              color: "#ffffff",
-              textDecoration: "none",
-              padding: "15px 30px",
-              borderRadius: "12px",
-              fontWeight: "bold",
-              marginBottom: "30px",
-            }}
-          >
-            <FaWhatsapp />
-            QUERO UMA SIMULAÇÃO GRATUITA
-          </a>
+  href="https://wa.me/message/QZSN4LOSADR3A1"
+  target="_blank"
+  rel="noreferrer"
+  style={{
+    display: "inline-block",
+    marginTop: "25px",
+    color: "#ffffff",
+    textDecoration: "underline",
+    fontWeight: "bold",
+  }}
+>
+  QUERO UMA SIMULAÇÃO GRATUITA
+</a>
 
           <p
   style={{
@@ -101,17 +95,17 @@ function App() {
 <div
   style={{
     flex: 1.2,
-    minWidth: "500px",
+    minWidth: "280px",
   }}
 >
+
           <img
   src={hero}
   alt=""
   style={{
     width: "100%",
     height: "500px",
-    objectFit: "cover",
-    objectPosition: "center",
+    objectFit: "contain",
     borderRadius: "24px",
     boxShadow: "0 15px 35px rgba(0,0,0,0.35)",
   }}
